@@ -13,3 +13,4 @@
  *= require_tree .
  *= require_self
  */
+p.read {color: rgb(232,232,232);}

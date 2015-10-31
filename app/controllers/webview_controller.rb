@@ -14,13 +14,14 @@ class WebviewController < ApplicationController
 
     view = Webview.find_by_url(page_url)
     if view
-      line = view.line_number
+      line = view.line_number - 1
+      for i in 0..line do
+        pl.data[i].appendAttr("class", 'read') if pl.data[i]
+      end
     end
 
-
-
     @page_url = page_url
-    @text = pl.data.html_safe
+    @text = pl.to_s.html_safe
     @images = il.images
 
   end
