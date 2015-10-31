@@ -1,6 +1,8 @@
 require_dependency 'para_element'
 
 class ParaListener
+	attr_reader :data
+	
 	def initialize
 		@data = []
 		@line = 1
@@ -10,7 +12,7 @@ class ParaListener
 		@line+=1
 	end
 
-	def data
+	def to_s
 		@data.join("\n")
 	end
 end
