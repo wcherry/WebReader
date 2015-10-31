@@ -1,4 +1,5 @@
-require 'para_element'
+require_dependency 'para_element'
+
 class ParaListener
 	def initialize
 		@data = []
