@@ -2,7 +2,7 @@ class ImageListener
 	def initialize
 		@images = Array.new
 	end
-	def image(el)
+	def emit_image(el)
 		@images << el[:image]
 	end
 

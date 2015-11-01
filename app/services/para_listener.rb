@@ -7,7 +7,7 @@ class ParaListener
 		@data = []
 		@line = 1
 	end
-	def para(el)
+	def emit_para(el)
 		@data << Para.new(el[:text]).appendAttr("data-line", @line).appendAttr("class", 'marker')
 		@line+=1
 	end
